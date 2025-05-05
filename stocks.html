@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>INST377 - Assignment 2 - Stocks Page</title>
+        <link rel="stylesheet" href="stocks.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+        <script src="annyang.js" defer></script>
+        <script src="stocks.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>INST 377 Activities</h1>
+        </header>
+
+        <nav id="navBar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+
+        <h2>Let's Chart Some Stocks!</h2>
+
+        <form onsubmit="event.preventDefault(); populateChart()" required>
+            <input type="text" id="stockTicker" name="stockTicker" maxlength="5">
+            <br>
+            <select id="stockTime" name="stockTime">
+                <option value="30">30 Days</option>
+                <option value="60">60 Days</option>
+                <option value="90">90 Days</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Lookup!">
+        </form>
+        <br>
+        <canvas id="stockChart" width="500" height="300"></canvas>
+        <br>
+
+        <table id="redditTable">
+            <thead>
+                <tr>
+                    <th>TICKER</th>
+                    <th>COMMENT COUNT</th>
+                    <th>SENTIMENT</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+
+        <div class="audio-box">
+            <h3>In this web page there options to Navigate using Audio!</h3>
+            <p>Ensure your Mic is enabled to be able to use this feature</p>
+            <ul>
+                <li>Look up a stock
+                    <ul>
+                        <li>Say: Lookup &lt;Stock Ticker&gt;</li>
+                    </ul>
+                </li>
+                <li>Navigate to a Different Page
+                    <ul>
+                        <li>Say: Navigate to &lt;page&gt;</li>
+                    </ul>
+                </li>
+                <li>Change the Page Color
+                    <ul>
+                        <li>Say: Change the color to &lt;color&gt;</li>
+                    </ul>
+                </li>
+                <li>Say Hello Back to you!
+                    <ul>
+                        <li>Say: Hello</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="audio-buttons">
+                <button class="audio-button-on">Turn On Listening</button>
+                <button class="audio-button-off">Turn Off Listening</button>
+            </div>
+        </div>
+    </body>
+</html>
