@@ -24,13 +24,13 @@ async function loadDogCarousel() {
         container.appendChild(img);
     });
 
-    const children = container.children;
+    const pictures = container.pictures;
     simpleslider.getSlider({
         container,
-        children,
+        pictures,
         onChange: (prev, next) => {
-        children[prev].className = '';
-        children[next].className = 'current-slide';
+        pictures[prev].className = '';
+        pictures[next].className = 'current-slide';
         },
         delay: 2,
         duration: 1
@@ -45,18 +45,18 @@ function loadBreedButtons() {
         .then(data => {
         allBreeds = data.data;
 
-        allBreeds.slice(0, 10).forEach(breed => {
-            const btn = document.createElement('button');
-            btn.textContent = breed.attributes.name;
-            btn.setAttribute('class', 'breed-button');
-            btn.setAttribute('type', 'button');
+            allBreeds.slice(0, 10).forEach(breed => {
+                const buttons = document.createElement('button');
+                buttons.textContent = breed.attributes.name;
+                buttons.setAttribute('class', 'breed-button');
+                buttons.setAttribute('type', 'button');
 
-            btn.onclick = function () {
-            displayBreedInfo(breed);
-            };
+                buttons.onclick = function () {
+                displayBreedInfo(breed);
+                };
 
-            buttonContainer.appendChild(btn);
-        });
+                buttonContainer.appendChild(buttons);
+            });
         });
 }
 

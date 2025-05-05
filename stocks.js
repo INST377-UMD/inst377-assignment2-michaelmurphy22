@@ -22,12 +22,12 @@ async function getData() {
 async function populateChart() {
     const stockData = await getData();
     const stockLabels = []; 
-    const closingPrices = []; 
+    const stockPrices = []; 
 
     stockData.results.forEach((day) => {
         const date = new Date(day.t);
         stockLabels.push(`${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`);
-        closingPrices.push(day.c);
+        stockPrices.push(day.c);
     });
 
     const ctx = document.getElementById('stockChart').getContext('2d');
@@ -43,7 +43,7 @@ async function populateChart() {
             datasets: [
                 {
                     label: '($) Stock Price',
-                    data: closingPrices,
+                    data: stockPrices,
                     borderColor: 'rgb(75, 192, 192)',
                     borderWidth: 1,
                     fill: false,
