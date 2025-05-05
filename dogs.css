@@ -1,0 +1,106 @@
+body {
+    background-color: beige;
+}
+
+#navBar {
+    background-color: orangered;
+    text-align: center;
+}
+
+#navBar li {
+    display: inline-block;
+    position: relative;
+    color: blue;
+    padding: 10px;
+    text-align: center;
+}
+
+#navBar li:hover {
+    background-color: white;
+}
+
+.audio-box {
+    background-color: green;
+    color: white;
+    margin: auto;
+    width: 45%;
+    padding: 20px;
+    text-align: left;
+}
+
+.audio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.audio-button-on {
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.audio-button-on:hover {
+    border: 3px solid black;
+}
+
+.audio-button-off {
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.audio-button-off:hover {
+    border: 3px solid black;
+}
+
+#dogCarousel {
+    margin: auto;
+    width: 70%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+#dogCarousel img {
+    object-fit: cover;
+}
+
+.breed-button {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.breed-button:hover {
+    color: red;
+    background-color: white;
+}
+
+
+#breedButtons {
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+
+.breed-info {
+    background-color: white;
+    border: 3px solid black;
+    font-size: 20;
+    padding: 15px
+}
+
+#dogCarousel {
+    margin: auto;
+    width: 70%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+#dogCarousel img {
+    object-fit: cover;
+}
+
+

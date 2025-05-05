@@ -1,0 +1,60 @@
+body {
+    background-color: beige;
+}
+
+#navBar {
+    background-color: orangered;
+    text-align: center;
+}
+
+#navBar li {
+    display: inline-block;
+    position: relative;
+    color: blue;
+    padding: 10px;
+    text-align: center;
+}
+
+#navBar li:hover {
+    background-color: white;
+}
+
+.audio-box {
+    background-color: green;
+    color: white;
+    margin: auto;
+    width: 45%;
+    padding: 20px;
+    text-align: left;
+}
+
+.audio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.audio-button-on {
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.audio-button-on:hover {
+    border: 3px solid black;
+}
+
+.audio-button-off {
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.audio-button-off:hover {
+    border: 3px solid black;
+}
+
+table, th, td {
+    background-color: white;
+    border: 1px solid black;
+}
